@@ -1,38 +1,21 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*{
+    font-family: "CustomFont";
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  
+  @font-face {
+    font-family: "CustomFont";
+    src: url(../public/fonts/ProductSans-Bold.woff);
   }
-  to {
-    transform: rotate(360deg);
+
+  .card{
+    box-shadow: 0 0.188em 1.00em rgb(121, 226, 255);
   }
-}
+
+  .buttonUniversal{
+    transition: 0.4s;
+  }
+
+  .buttonUniversal:hover{
+    transform: scale(1.1);
+  }
