@@ -19,3 +19,7 @@
   .buttonUniversal:hover{
     transform: scale(1.1);
   }
+
+  .lyrics-container {
+    white-space: pre-line;
+  }
