@@ -27,3 +27,39 @@
   .song-bg{
     box-shadow: 0 0.188em 1.00em rgb(121, 226, 255);
   }
+
+  .volume-btn{
+    height: 2px;
+    width: 100px;
+    border-radius: 20px;
+    -webkit-appearance: none;
+  }
+
+  .volume-btn::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: rgb(112, 227, 253);
+    border-radius: 50px;
+  }
+
+
+  
+  .timeline-btn{
+    
+    height: 2px;
+    width: 150px;
+    border-radius: 20px;
+    -webkit-appearance: none;
+    
+  }
+
+  .timeline-btn::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: rgb(0, 236, 228);
+    border-radius: 50px;
+  }
+
+

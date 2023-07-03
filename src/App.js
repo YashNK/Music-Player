@@ -72,7 +72,7 @@ setNextSongindex(() => {
 
         <Route exact path='/player' element={
           <Player currentSongIndex={currentSongIndex} setCurrentSongIndex={setCurrentSongIndex}
-          nextSongIndex={nextSongIndex}
+          nextSongIndex={nextSongIndex} 
           songs={songs} />}></Route>
          <Route exact path='/lyrics' element={< Lyrics />}></Route>
 

@@ -6,12 +6,52 @@ import Lyrics from './Lyrics';
 import { useNavigate } from "react-router-dom";
 import logo from '../logo.png'
 import Settings from './Settings'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faVolumeHigh, faVolumeOff } from '@fortawesome/free-solid-svg-icons'
 
 function Player(props) {
 
     const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const navigate = useNavigate();
+    const [previouslyPlayedIndex, setPreviouslyPlayedIndex] = useState(null);
+    const [currentTime, setCurrentTime] = useState(0);
+    const [duration, setDuration] = useState(0);
+    const [volume, setVolume] = useState(0.5);
+
+    useEffect(() => {
+        const handleTimeUpdate = () => {
+          setCurrentTime(audioEl.current.currentTime);
+        };
+    
+        const handleLoadedMetadata = () => {
+          setDuration(audioEl.current.duration);
+        };
+    
+        if (audioEl.current) {
+          audioEl.current.addEventListener('timeupdate', handleTimeUpdate);
+          audioEl.current.addEventListener('loadedmetadata', handleLoadedMetadata);
+        }
+    
+        return () => {
+          if (audioEl.current) {
+            audioEl.current.removeEventListener('timeupdate', handleTimeUpdate);
+            audioEl.current.removeEventListener('loadedmetadata', handleLoadedMetadata);
+          }
+        };
+      }, []);
+
+      const handleSeek = (event) => {
+        const newTime = parseFloat(event.target.value);
+        audioEl.current.currentTime = newTime;
+        setCurrentTime(newTime);
+      };
+
+    const handleVolumeChange = (event) => {
+        const newVolume = parseFloat(event.target.value);
+        setVolume(newVolume);
+        audioEl.current.volume = newVolume;
+      };
 
     useEffect(() => {
         if (isPlaying) {
@@ -23,12 +63,13 @@ function Player(props) {
 
     const SkipSong = (forwards = true) => {
 
-        const randomIndex = Math.floor(Math.random() * props.songs.length);
+        // const randomIndex = Math.floor(Math.random() * props.songs.length);
 
-        props.setCurrentSongIndex(randomIndex);
+        // props.setCurrentSongIndex(randomIndex);
 
         if (forwards) {
             props.setCurrentSongIndex(() => {
+
                 let temp = props.currentSongIndex;
                 temp++;
 
@@ -36,10 +77,28 @@ function Player(props) {
                     temp = 0;
                 }
 
-                return props.setCurrentSongIndex(randomIndex);
+                return temp;
+
+                // return props.setCurrentSongIndex(randomIndex);
                 
 
                 // return (props.setCurrentSongIndex(randomIndex));
+
+            // let randomIndex;
+
+            // if (props.songs.length > 1) {
+           
+            // do {
+            // randomIndex = Math.floor(Math.random() * props.songs.length);
+            // } while (randomIndex === previouslyPlayedIndex);
+            // } else {
+
+            // randomIndex = 0;
+            // }
+
+            // props.setCurrentSongIndex(randomIndex);
+            // setPreviouslyPlayedIndex(randomIndex);
+   
 
             });
 
@@ -93,17 +152,48 @@ function Player(props) {
             <PlayerControls isPlaying={isPlaying} setIsPlaying={setIsPlaying}
             SkipSong={SkipSong} />
 
+            <div className='absolute lg:mt-[-4.8%] lg:ml-[8%] ml-[17.5%] mt-[-18%]'>
+            <input
+            className='timeline-btn '
+            type="range"
+            id="seek"
+            name="seek"
+            min="0"
+            max={audioEl.current ? audioEl.current.duration : 0}
+            step="0.1"
+            value={currentTime}
+            onChange={handleSeek}
+            />
+            
+            </div>
+
             <p className='mt-4 text-[70%]'><strong>Next up:<br></br></strong>{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</p>
 
-           
+            <div className='w-[50%] h-[2.7%] rounded-2xl absolute flex justify-center items-center lg:mt-[4%] lg:ml-[-12%] ml-[10%] mt-[20%] bg-gray-200/20'>
+
+            <FontAwesomeIcon icon={faVolumeOff} className='mr-3 text-[50%]' />
             
+            <input
+            className='volume-btn'
+            type="range"
+            id="volume"
+            name="volume"
+            min="0"
+            max="1"
+            step="0.01"
+            value={volume}
+            onChange={handleVolumeChange}
+            />
 
-            </div> 
+            <FontAwesomeIcon icon={faVolumeHigh} className='ml-3 text-[50%]' /> 
+            </div>
 
+            </div>
+        </div>
         </div>  
         
 
-    </div>
+   
     
     <Lyrics song={props.songs[props.currentSongIndex]} /> 
     </>
