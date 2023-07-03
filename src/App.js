@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Suspense} from "react";
 import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter }   
 from 'react-router-dom';  
 import Home from "./components/Home";
@@ -60,24 +60,27 @@ setNextSongindex(() => {
 })
   },[currentSongIndex])
 
+
   return (
     <div>
-      
-    <BrowserRouter>
-      <Routes>  
-        <Route exact path='/' element={< StartingPage />}>
-        </Route>  
-        <Route exact path='player' element={
 
+    <BrowserRouter>
+      <Routes>
+
+        <Route exact path='/' element={< StartingPage />}>
+        </Route> 
+
+        <Route exact path='/player' element={
           <Player currentSongIndex={currentSongIndex} setCurrentSongIndex={setCurrentSongIndex}
           nextSongIndex={nextSongIndex}
-          songs={songs} />
+          songs={songs} />}></Route>
+         <Route exact path='/lyrics' element={< Lyrics />}></Route>
 
-        }></Route>
-         <Route exact path='lyrics' element={< Lyrics />}></Route>
-        <Route exact path='home' element={< Home />}></Route>   
+        <Route exact path='/home' element={< Home />}></Route>  
+         
       </Routes>  
     </BrowserRouter>
+
     </div>
   );
 }

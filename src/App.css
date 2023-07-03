@@ -23,3 +23,7 @@
   .lyrics-container {
     white-space: pre-line;
   }
+
+  .song-bg{
+    box-shadow: 0 0.188em 1.00em rgb(121, 226, 255);
+  }
