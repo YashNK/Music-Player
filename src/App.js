@@ -6,9 +6,10 @@ import StartingPage from "./components/StartingPage";
 import Player from "./components/Player";
 import './App.css';
 import Lyrics from "./components/Lyrics";
+import Preload from "./components/Preload";
 function App() {
 
-  const [songs] = useState([
+  const [songs, setSongs] = useState([
     {
       title: "Running Up The Hill",
       artist: "Kate Bush",
@@ -33,9 +34,23 @@ function App() {
     {
       title: "Hotline Bling",
       artist: "Drake",
-      img_src: "./images/Hotline Bling.png",
+      img_src: "./images/Hotline bling.jpg",
       src: "./music/Drake  Hotline Bling.mp3",
       Lyrics: "You used to call me on my\nYou used to, you used to\nYeah\nYou used to call me on my cell phone\nLate night when you need my love\nCall me on my cell phone\nLate night when you need my love\nAnd I know when that hotline bling\nThat can only mean one thing\nI know when that hotline bling\nThat can only mean one thing\nEver since I left the city, you\nGot a reputation for yourself now\nEverybody knows and I feel left out\nGirl, you got me down, you got me stressed out\n'Cause ever since I left the city, you\nStarted wearing less and goin' out more\nGlasses of champagne out on the dance floor\nHangin' with some girls I've never seen before\nYou used to call me on my cell phone\nLate night when you need my love\nCall me on my cell phone\nLate night when you need my love\nI know when that hotline bling\nThat can only mean one thing\nI know when that hotline bling\nThat can only mean one thing\nEver since I left the city, you, you, you\nYou and me, we just don't get along\nYou make me feel like I did you wrong\nGoing places where you don't belong\nEver since I left the city, you\nYou got exactly what you asked for\nRunning out of pages in your passport\nHanging with some girls I've never seen before\nYou used to call me on my cell phone\nLate night when you need my love\nCall me on my cell phone\nLate night when you need my love\nAnd I know when that hotline bling\nThat can only mean one thing\nI know when that hotline bling\nThat can only mean one thing\nThese days, all I do is\nWonder if you're bendin' over backwards for someone else\nWonder if you're rollin' up a Backwoods for someone else\nDoing things I taught you, gettin' nasty for someone else\nYou don't need no one else\nYou don't need nobody else, no\nWhy you never alone?\nWhy you always touchin' road?\nUsed to always stay at home, be a good girl\nYou was in the zone\nYeah, you should just be yourself\nRight now, you're someone else\nYou used to call me on my cell phone\nLate night when you need my love\nCall me on my cell phone\nLate night when you need my love\nAnd I know when that hotline bling\nThat can only mean one thing\nI know when that hotline bling\nThat can only mean one thing\nEver since I left the city"
+    },
+    {
+      title: "Scandalous",
+      artist: "Drake",
+      img_src: "./images/Scandalous.jpg",
+      src: "./music/Scandalous ShilohDynasty.mp3",
+      Lyrics: "One more\nShot, 'cause\nI feel like you're up to somethin'\nFuck that, you're up to somethin'\nScandalous\nTaste my bitter heart\nI know it makes you blush\nBut\nSomethin' isn't right with this\nI've been listenin', paying attention, you don't listen\nYou've been givin', you've been spendin'\nAll your time out there lyin'\nOh, oh-oh\nYeah, yeah\nYou're like Novocaine\nNovocaine\nYeah\nYeah\nPoison in my brain\nNovocaine\nHey\nHey, hey, yeah\nYou're like Novocaine\nNovacaine\nOverdosin' over you\nGot me feelin' like a movie\nCome over, let's make a movie\nAnd work your body\nDown, down, down\nDown\nDown\nOh, ah\nReminisce on every picture wit' you\nYes, I miss you, but you wasn't happy\nKick it wit' you in the city\nBusy, but you wasn't in it for the magic\nAnd I don't want to fall in love\nGot me goin' through the motions\nSo come on, baby, give me somethin'\n'Cause\nSomethin' isn't right with this\nI've been listenin', paying attention, you don't listen\nYou've been givin', you've been spendin'\nAll your time out there lyin'\nOh, oh-oh\nYeah, yeah\nYou're like Novocaine\nNovocaine\nYeah\nYeah\nPoison in my brain\nNovocaine\nHey\nHey, hey, yeah\nYou're like Novocaine\nNovocaine\nNovocaine\nPoison in my brain\nNovocaine"
+    },
+    {
+      title: "Psycho Killer",
+      artist: "Talking Heads",
+      img_src: "./images/Stranger Things.jpg",
+      src: "./music/Psycho Killer.mp3",
+      Lyrics: "I can't seem to face up to the facts\nI'm tense and nervous and I can't relax\nI can't sleep 'cause my bed's on fire\nDon't touch me, I'm a real live wire\nPsycho Killer\nQu'est-ce que c'est?\nFa-fa-fa-fa, fa-fa-fa-fa-fa-fa, better\nRun, run, run, run, run, run, run away, oh-oh-oh\nPsycho Killer\nQu'est-ce que c'est?\nFa-fa-fa-fa, fa-fa-fa-fa-fa-fa, better\nRun, run, run, run, run, run, run away, oh, oh, oh, oh\nAy-ya-ya-ya-ya-ya, ooh\nYou start a conversation, you can't even finish it\nYou're talking a lot, but you're not saying anything\nWhen I have nothing to say, my lips are sealed\nSay something once, why say it again?\nPsycho Killer\nQu'est-ce que c'est?\nFa-fa-fa-fa, fa-fa-fa-fa-fa-fa, better\nRun, run, run, run, run, run, run away, oh-oh-oh\nPsycho Killer\nQu'est-ce que c'est?\nFa-fa-fa-fa, fa-fa-fa-fa-fa-fa, better\nRun, run, run, run, run, run, run away, oh, oh, oh, oh\nAy-ya-ya-ya-ya-ya\nCe que j'ai fait, ce soir-là\nCe qu'elle a dit, ce soir-là\nRéalisant mon espoir\nJe me lance vers la gloire, okay\nYeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah\nWe are vain and we are blind\nI hate people when they're not polite\nPsycho Killer\nQu'est-ce que c'est?\nFa-fa-fa-fa, fa-fa-fa-fa-fa-fa, better\nRun, run, run, run, run, run, run away, oh-oh-oh\nPsycho Killer\nQu'est-ce que c'est?\nFa-fa-fa-fa, fa-fa-fa-fa-fa-fa, better\nRun, run, run, run, run, run, run away, oh, oh, oh, oh\nAi-ya-ya-ya-ya-ya, ooh"
     },
     {
       title: "Gods Plan",
@@ -47,10 +62,10 @@ function App() {
   ]);
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [nextSongIndex, setNextSongindex] = useState(currentSongIndex + 1);
+  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
   useEffect(() => {
-setNextSongindex(() => {
+setNextSongIndex(() => {
   if (currentSongIndex + 1 > songs.length-1) {
     return 0;
   }
@@ -63,6 +78,7 @@ setNextSongindex(() => {
 
   return (
     <div>
+      {/* <Preload /> */}
 
     <BrowserRouter>
       <Routes>
@@ -72,8 +88,8 @@ setNextSongindex(() => {
 
         <Route exact path='/player' element={
           <Player currentSongIndex={currentSongIndex} setCurrentSongIndex={setCurrentSongIndex}
-          nextSongIndex={nextSongIndex} 
-          songs={songs} />}></Route>
+          nextSongIndex={nextSongIndex} setNextSongIndex={setNextSongIndex}
+          songs={songs} setSongs={setSongs} />}></Route>
          <Route exact path='/lyrics' element={< Lyrics />}></Route>
 
         <Route exact path='/home' element={< Home />}></Route>  

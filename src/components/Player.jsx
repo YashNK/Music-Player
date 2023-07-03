@@ -8,6 +8,7 @@ import logo from '../logo.png'
 import Settings from './Settings'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVolumeHigh, faVolumeOff } from '@fortawesome/free-solid-svg-icons'
+import Preload from './Preload';
 
 function Player(props) {
 
@@ -60,12 +61,31 @@ function Player(props) {
             audioEl.current.pause();
         }
     });
+    
 
     const SkipSong = (forwards = true) => {
+
+      // const shuffledArray = [...props.songs];
+
+      // for (let i = shuffledArray.length - 1; i > 0; i--) {
+      //   const randomIndex = Math.floor(Math.random() * (i + 1));
+      //   [shuffledArray[i], shuffledArray[randomIndex]] = [
+      //     shuffledArray[randomIndex],
+      //     shuffledArray[i],
+      //   ];
+      // }
+  
+      // props.setSongs(shuffledArray);
+      // props.setCurrentSongIndex(0);
+    
 
         // const randomIndex = Math.floor(Math.random() * props.songs.length);
 
         // props.setCurrentSongIndex(randomIndex);
+
+        // return(
+        //   props.setCurrentSongIndex(randomIndex)
+        //   )
 
         if (forwards) {
             props.setCurrentSongIndex(() => {
@@ -78,26 +98,27 @@ function Player(props) {
                 }
 
                 return temp;
+              
 
-                // return props.setCurrentSongIndex(randomIndex);
+        //         return props.setCurrentSongIndex(randomIndex);
                 
 
-                // return (props.setCurrentSongIndex(randomIndex));
+        //         // return (props.setCurrentSongIndex(randomIndex));
 
-            // let randomIndex;
+        //     // let randomIndex;
 
-            // if (props.songs.length > 1) {
+        //     // if (props.songs.length > 1) {
            
-            // do {
-            // randomIndex = Math.floor(Math.random() * props.songs.length);
-            // } while (randomIndex === previouslyPlayedIndex);
-            // } else {
+        //     // do {
+        //     // randomIndex = Math.floor(Math.random() * props.songs.length);
+        //     // } while (randomIndex === previouslyPlayedIndex);
+        //     // } else {
 
-            // randomIndex = 0;
-            // }
+        //     // randomIndex = 0;
+        //     // }
 
-            // props.setCurrentSongIndex(randomIndex);
-            // setPreviouslyPlayedIndex(randomIndex);
+        //     // props.setCurrentSongIndex(randomIndex);
+        //     // setPreviouslyPlayedIndex(randomIndex);
    
 
             });
@@ -128,6 +149,7 @@ function Player(props) {
     return (
     <>
     <img className='absolute w-full object-cover h-screen' src={wallpaper2} />
+    
     
     <div className='absolute w-full h-screen flex flex-col items-center justify-center bg-black bg-opacity-75'>
         <div className='w-[70%] h-[61%] lg:w-[25%] md:w-[45%] md:h-[65%] pt-[5%] pb-[5%] flex flex-col justify-center items-center card bg-white/20 text-white rounded-2xl'>
@@ -169,12 +191,12 @@ function Player(props) {
 
             <p className='mt-4 text-[70%]'><strong>Next up:<br></br></strong>{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</p>
 
-            <div className='w-[50%] h-[2.7%] rounded-2xl absolute flex justify-center items-center lg:mt-[4%] lg:ml-[-12%] ml-[10%] mt-[20%] bg-gray-200/20'>
+            <div className='lg:w-[14%] w-[50%] h-[2.7%] rounded-2xl absolute flex justify-center items-center lg:mt-[4%] lg:ml-[6%] ml-[10%] mt-[20%] bg-gray-200/20 '>
 
             <FontAwesomeIcon icon={faVolumeOff} className='mr-3 text-[50%]' />
             
             <input
-            className='volume-btn'
+            className='volume-btn '
             type="range"
             id="volume"
             name="volume"
@@ -185,17 +207,20 @@ function Player(props) {
             onChange={handleVolumeChange}
             />
 
+            
+
             <FontAwesomeIcon icon={faVolumeHigh} className='ml-3 text-[50%]' /> 
             </div>
+            
 
             </div>
         </div>
-        </div>  
-        
-
-   
+        </div>
     
-    <Lyrics song={props.songs[props.currentSongIndex]} /> 
+    <Lyrics song={props.songs[props.currentSongIndex]} />
+    <div className="w-full h-screen overflow-hidden lg:mb-0 md:mb-0 ">
+        <Preload />
+        </div>
     </>
   )
 }
