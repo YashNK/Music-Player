@@ -18,7 +18,7 @@ function Player(props) {
     const [previouslyPlayedIndex, setPreviouslyPlayedIndex] = useState(null);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
-    const [volume, setVolume] = useState(0.5);
+    const [volume, setVolume] = useState(1);
 
     useEffect(() => {
         const handleTimeUpdate = () => {
@@ -167,7 +167,7 @@ function Player(props) {
 
             <div className='text-center'>
                 
-            <img className="absolute lg:w-[8%] lg:mt-[-13%] lg:ml-[8.9%] w-[30%] mt-[-60%] ml-[21%] cursor-pointer" onClick={()=>{navigate('/')}} src={logo} />
+            <img className="absolute lg:mt-fixed lg:w-[8%] lg:mt-[-13%] lg:ml-[8.9%] w-[30%] mt-[-60%] ml-[21%] cursor-pointer" onClick={()=>{navigate('/')}} src={logo} />
 
             <PlayerDetails song={props.songs[props.currentSongIndex]} />
 
