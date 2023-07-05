@@ -2,6 +2,8 @@ import React from 'react'
 
 function Lyrics(props) {
   return (
+    <>
+    
     <div className='w-full absolute lg:mt-[49.9%]
     md:mt-[100%] mt-[209.55%] bg-black text-white'>
         <div className='w-full bg-black lg:mt-[6%] mt-[10%] flex items-center flex-col'>
@@ -11,6 +13,7 @@ function Lyrics(props) {
             
         </div>
     </div>
+    </>
   )
 }
 

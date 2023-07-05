@@ -32,6 +32,13 @@ function App() {
       Lyrics: "Up with your turret\nAren't we just terrified?\n\nShale, screen your worry\nFrom what you won't ever find\n\nDon't let it fool you\nDon't let it fool you down\n\nDown's sitting around\nFolds in the gown\n\nSea and the rock below\nCocked to the undertow\n\nBones, blood and teeth erode\nWith every crashing node\n\nWings wouldn't help you\nWings wouldn't help you down\n\nDown fills the ground\nGravity's proud\n\nYou barely are blinking\nWagging your face around\n\nWhen'd this just become a mortal home?\n\nWon't, won't, won't, won't\nWon't let you talk me\n\nWon't let you talk me down\n\nWill pull it taut\nNothing let out"
     },
     {
+      title: "I Can't Get Enough",
+      artist: "Selena Gomez, Benny Blanco, Tainy, J Balvin",
+      img_src: "./images/I Cant Get Enough.jpg",
+      src: "./music/I Cant Get Enough.mp3",
+      Lyrics: "Crazy\nI like that, you like that, so let's be crazy\nThe contact, impact, I want that daily\nOur breath getting deeper, deeper, lately\nI like that, baby\n\n'Cause I can't get enough\nYeah, I can't get enough\nYeah, I can't get enough of your love\nGive me some more, I love it\nI can't get enough\nYeah\n'Cause I can't get enough (Leggo')\n\nDice que no le es suficiente (Wuh)\n'Tá mal de la mente (Yah)\nCuando está solita que entre (Eh)\nMúsica para ponerla en ambiente, yeh yeah\n\nElla quiere que lo hagamo' como aquella ve' (Yah)\nLe busqué otro trago por si tenía sed (Uh)\nTo' lo que se pone bonito se le ve (Bonito se le ve)\nEmpezamo' a pie y ahora andamo' en el jet (Wuh)\n\nVamo' a calentar\nBaby tú va' a subir y a bajar\nNo se quiere olvidar, lo quiere recordar\nBaby yo quiero entrar\n\n'Cause I can't get enough (Yah)\nYeah, I can't get enough (Yah) (Latino gang)\nYeah, I can't get enough of your love\nGive me some more, I love it\nI can't get enough (Come on)\nYeah\n'Cause I can't, can't\n\nCrazy\nI like that, you like that, so let's be crazy\nThe contact, impact, I want that daily\nOur breath getting deeper, deeper, lately\nI like that, baby (Yeah)\n\nUhh\nNo one's gotta know, we can keep it lowkey\nI'll be fine alone, long as you're alone with me (Tell 'em)\nSo incredible, unforgettable on me\nKeep your body on me (Leggo') (Leggo') (Tainy, come on)\n\n'Cause I can't get enough (Benny, Benny Blanco)\nYeah, I can't get enough (J Balvin man) (Selena)\nYeah, I can't get enough of your love\nGive me some more, I love it\nI can't get enough\nYeah\n'Cause I can't get enough"
+    },
+    {
       title: "Hotline Bling",
       artist: "Drake",
       img_src: "./images/Hotline bling.jpg",
