@@ -167,7 +167,7 @@ function Player(props) {
 
             <div className='text-center'>
                 
-            <img className="absolute lg:mt-fixed lg:w-[8%] lg:mt-[-13%] lg:ml-[8.9%] w-[30%] mt-[-60%] ml-[21%] cursor-pointer" onClick={()=>{navigate('/')}} src={logo} />
+            <img className="absolute lg:mt-fixed lg:w-[8%] lg:mt-[-13%] lg:ml-[8.9%] w-[30%] mt-[-60%] ml-[21%] cursor-pointer logo" onClick={()=>{navigate('/')}} src={logo} />
 
             <PlayerDetails song={props.songs[props.currentSongIndex]} />
 
@@ -189,9 +189,9 @@ function Player(props) {
             
             </div>
 
-            <p className='mt-4 text-[70%]'><strong>Next up:<br></br></strong>{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</p>
+            <p className='mt-4 text-[70%] text-gray-300'><strong>Next up:<br></br></strong>{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</p>
 
-            <div className='lg:w-[14%] w-[50%] h-[2.7%] rounded-2xl absolute flex justify-center items-center lg:mt-[4%] lg:ml-[6%] ml-[10%] mt-[20%] bg-gray-200/20 '>
+            <div className='lg:w-[14%] w-[50%] h-[2.7%] rounded-2xl absolute flex justify-center items-center lg:mt-[4%] lg:ml-[6%] ml-[10%] mt-[20%] bg-red-200/20 '>
 
             <FontAwesomeIcon icon={faVolumeOff} className='mr-3 text-[50%]' />
             

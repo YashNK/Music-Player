@@ -43,6 +43,8 @@
     height: 10px;
     background: rgb(255, 255, 255);
     border-radius: 500px;
+    box-shadow: 0 0.188em 1.00em rgb(121, 226, 255);
+
   }
 
   
@@ -62,6 +64,8 @@
     height: 8px;
     background: rgb(255, 255, 255);
     border-radius: 50px;
+    box-shadow: 0 0.188em 1.00em rgb(121, 226, 255);
+
   }
 
 
