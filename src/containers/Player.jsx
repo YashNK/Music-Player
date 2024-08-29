@@ -81,6 +81,11 @@ function Player(props) {
   }, [isPlaying, props.currentSongIndex, shuffledSongs, currentSongIndex]);
 
   const SkipSong = (forwards = true) => {
+    let flag = 0;
+    if(isPlaying === true){
+      setIsPlaying(false)
+      flag = 1;
+    }
     if (isShuffling) {
       setCurrentSongIndex((prevIndex) => {
         let newIndex =
@@ -101,6 +106,9 @@ function Player(props) {
           props.songs.length;
         return newIndex;
       });
+    }
+    if(flag === 1){
+      setIsPlaying(true)
     }
   };
 

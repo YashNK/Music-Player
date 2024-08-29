@@ -44,7 +44,7 @@
   max-width: 80%;
   color: white;
   background-color: rgba(161, 35, 35, 0.427);
-  box-shadow: 0 0 1em rgb(121, 226, 255);
+  box-shadow: 0 0 1em rgb(255, 121, 121);
   padding: 30px;
   border-radius: 10px;
 }
@@ -67,6 +67,7 @@
   }
 }
 .song_timeline {
+  -webkit-appearance: none;
   width: 150px;
   height: 2px; 
   background: #ddd;
@@ -85,7 +86,7 @@
   width: 15px;
   height: 15px;
   background: #ff0000;
-  box-shadow: 0 0 1em rgb(245, 146, 146);
+  box-shadow: 0 0 8px 3px rgb(255, 87, 87);
   border-radius: 50%;
   cursor: pointer;
   position: relative;
@@ -98,7 +99,7 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  background-color: rgb(117, 41, 41);
+  background-color: rgb(147, 44, 44);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   flex-direction: column;
