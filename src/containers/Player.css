@@ -1,0 +1,134 @@
+.player_conatiner {
+  background-image: url("/public/images/wall5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: safe center;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.player_header {
+  background-image: url("/public/images/wall6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 50%;
+}
+.nightvibe_logo {
+  max-width: 150px;
+}
+.player_content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: safe center;
+  padding: 8px 0px;
+}
+.player_content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.player_card {
+  flex: 1 1 10px;
+  max-height: 90%;
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  max-width: 80%;
+  color: white;
+  background-color: rgba(161, 35, 35, 0.427);
+  box-shadow: 0 0 1em rgb(121, 226, 255);
+  padding: 30px;
+  border-radius: 10px;
+}
+.player_card::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.card_header {
+  padding-bottom: 20px;
+}
+.player_btn {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px 20px;
+  &.playing {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    flex: 1 1 10px;
+  }
+}
+.song_timeline {
+  width: 150px;
+  height: 2px; 
+  background: #ddd;
+  border-radius: 5px;
+  outline: none; 
+  cursor: pointer; 
+  position: relative;
+}
+.song_timeline::-webkit-slider-runnable-track {
+  height: 2px;
+  background: #fe5353; 
+  border-radius: 5px;
+}
+.song_timeline::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #ff0000;
+  box-shadow: 0 0 1em rgb(245, 146, 146);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  margin-top: -6px;
+}
+.song_timeline:focus {
+  outline: none;
+}
+.player_lyrics_content {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: rgb(117, 41, 41);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+@media screen and (max-width: 800px) {
+  .player_btn {
+    &.playing {
+      margin: 10px;
+      display: block;
+    }
+  }
+  .player_conatiner {
+    flex-direction: column;
+  }
+  .player_content {
+    height: calc(100vh - 230px);
+  }
+  .player_card {
+    width: auto;
+    max-height: 100%;
+    margin-bottom: 15px;
+    padding: 30px 15px;
+  }
+  .player_header {
+    background-image: none;
+    height: auto;
+  }
+  .player_lyrics_content {
+    width: 100%;
+  }
+}

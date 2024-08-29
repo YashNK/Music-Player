@@ -1,0 +1,23 @@
+.lyrics_container{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    text-align: center;
+    overflow: scroll;
+}
+.lyrics_container::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+.lyrics_content{
+    max-width: 80%;
+    min-width: 30%;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

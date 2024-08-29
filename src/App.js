@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import StartingPage from "./containers/StartingPage";
-import Player from "./components/Player";
+import Player from "./containers/Player";
 import songs from "./assets/songs";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         return currentSongIndex + 1;
       }
     });
-  }, [currentSongIndex]);
+  }, []);
 
   return (
     <div>

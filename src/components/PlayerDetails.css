@@ -1,0 +1,32 @@
+.player_details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.player_song_image {
+  max-width: 40%;
+  min-width: 200px; 
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgb(121, 226, 255);
+}
+.player_song_title {
+  width: 100%;
+  margin-top: 10px;
+}
+.player_song_artist {
+  width: 100%;
+  margin-top: 5px;
+}
+@media (max-width: 800px) {
+  .player_song_image {
+    max-width: 40%;
+    min-width: 200px;
+  }
+  .player_song_title,
+  .player_song_artist {
+    padding: 0 10px;
+  }
+}

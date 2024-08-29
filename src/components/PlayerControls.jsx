@@ -9,20 +9,20 @@ import {
 
 function PlayerControls(props) {
   return (
-    <div className="mt-10">
+    <div className="p-2">
       <button
-        className="mr-10 cursor-pointer"
+        className="p-2 w-[50px]"
         onClick={() => props.SkipSong(false)}
       >
         <FontAwesomeIcon icon={faBackward} />
       </button>
       <button
-        className="mr-10 pt-[3%] md:pt-[2.2%] md:pb-[2%] pb-[2.3%] pl-[5%] pr-[5%] rounded-full bg-black text-white cursor-pointer"
+        className="p-2 w-[50px]"
         onClick={() => props.setIsPlaying(!props.isPlaying)}
       >
         <FontAwesomeIcon icon={props.isPlaying ? faPause : faPlay} />
       </button>
-      <button className="cursor-pointer" onClick={() => props.SkipSong()}>
+      <button className="p-2 w-[50px]" onClick={() => props.SkipSong()}>
         <FontAwesomeIcon icon={faForward} />
       </button>
     </div>

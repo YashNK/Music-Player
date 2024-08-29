@@ -1,17 +1,20 @@
 import React from "react";
+import "./Lyrics.css";
 
 function Lyrics(props) {
+  const formattedLyrics = props.song.Lyrics.split('\n').map((line, index) => (
+    <div key={index}>
+      {line}
+      <br />
+    </div>
+  ));
+
   return (
-    <div
-      className="w-full absolute lg:mt-[49.9%]
-    md:mt-[100%] mt-[209.55%] bg-black text-white"
-    >
-      <div className="w-full bg-black lg:mt-[6%] mt-[10%] flex items-center flex-col">
-        <h1 className="text-[209%]">Lyrics</h1>
-        <h1 className="mt-3 text-[140%]">{props.song.title}</h1>
-        <h2 className="mt-4 lyrics-container mr-12 ml-12 text-gray-600 mb-6">
-          {props.song.Lyrics}
-        </h2>
+    <div className="lyrics_container pb-5">
+      <div className="lyrics_content">
+        <h1 className="lyrics_title pt-3 pb-2">Lyrics</h1>
+        <h1 className="song_title pb-3">{props.song.title}</h1>
+        <h2 className="song_lyrics">{formattedLyrics}</h2>
       </div>
     </div>
   );
